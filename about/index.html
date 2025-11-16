@@ -2,13 +2,86 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>关于页面</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background: url('https://buli-img-r2.810808.xyz/file/1762533288239_photo-1511379938547-c1f69419868d.jpg') no-repeat center center fixed;
+      background-size: cover;
+      min-height: 100vh;
+      margin: 0;
+      font-family: 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Arial', sans-serif;
+      color: #fff;
+      position: relative;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0; width: 100vw; height: 100vh;
+      background: rgba(0,0,0,0.50);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .content-wrapper {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      min-height: 90vh;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 1.5rem;
+      font-size: 2.5rem;
+      text-shadow: 0 3px 20px #000, 0 1px 1px #222;
+    }
+    p {
+      font-size: 1.15em;
+      margin: 0.5em 0 1em 0;
+      text-shadow: 0 2px 8px #000, 0 1px 1px #222;
+    }
+    a {
+      color: #fff;
+      text-decoration: none;
+      background: rgba(0,0,0,0.22);
+      font-weight: 600;
+      letter-spacing: 1px;
+      border-radius: 6px;
+      padding: 0.6em 1.5em;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+      font-size: 1.05em;
+      margin-top: 1.5em;
+      display: inline-block;
+      transition: background 0.18s, color 0.18s, box-shadow 0.25s;
+    }
+    a:hover, a:focus {
+      background: rgba(255,255,255,0.13);
+      color: #ffd700;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+      outline: none;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2em;
+      }
+      .content-wrapper {
+        min-height: 75vh;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>关于这个项目</h1>
-  <p>这是一个学习负载均衡的网站应用，使用Vercel前端托管和Cloudflare+VPS后端。</p>
-  <p>后端VPS资源：美国ColoCrossing、英国MassiveGRID、意大利Deluxhost。</p>
-  <a href="/">返回首页</a>
+  <div class="content-wrapper">
+    <h1>关于这个项目</h1>
+    <p>这是一个学习负载均衡的网站应用，使用 <strong>Vercel</strong> 前端托管和 <strong>Cloudflare+VPS</strong> 后端。</p>
+    <p>后端VPS资源：美国ColoCrossing、英国MassiveGRID、意大利Deluxhost。</p>
+    <a href="/">返回首页</a>
+  </div>
 </body>
 </html>
