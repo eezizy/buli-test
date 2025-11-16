@@ -6,13 +6,106 @@
   <meta name="description" content="这是一个基于Vercel和GitHub的学习项目主页，后端支持为Cloudflare负载均衡VPS。">
   <title>测试网站首页</title>
   <link rel="stylesheet" href="style.css">
-  <!-- 可选：添加字体或图标库 -->
   <link rel="icon" href="/favicon.ico">
+  <style>
+    body {
+      /* 背景图片相关设置 */
+      background: url('https://buli-img-r2.810808.xyz/file/1762533288239_photo-1511379938547-c1f69419868d.jpg') no-repeat center center fixed;
+      background-size: cover;
+      min-height: 100vh;
+      margin: 0;
+      font-family: 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Arial', sans-serif;
+      color: #fff;
+      position: relative;
+    }
+
+    body::before {
+      /* 让背景变暗，提升可读性 */
+      content: '';
+      position: fixed;
+      top: 0; left: 0; width: 100vw; height: 100vh;
+      background: rgba(0,0,0,0.50);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    header, main, footer {
+      position: relative;
+      z-index: 1;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+    }
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 600;
+      padding: 0.5em 1.2em;
+      border-radius: 6px;
+      transition: background 0.15s, color 0.15s, box-shadow 0.2s;
+      background: rgba(0,0,0,0.2);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    nav a:hover, nav a:focus {
+      background: rgba(255,255,255,0.12);
+      color: #ffd700;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.16);
+      outline: none;
+    }
+
+    main {
+      display: flex;
+      min-height: 70vh;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 1.2rem;
+      font-size: 2.8rem;
+      text-shadow: 0 3px 20px #000, 0 1px 1px #222;
+    }
+    p {
+      font-size: 1.3em;
+      margin: 0.5em 0;
+      text-shadow: 0 2px 8px #000, 0 1px 1px #222;
+    }
+    footer {
+      text-align: center;
+      padding: 1em 0 1.5em;
+      font-size: 1em;
+      color: #ccc;
+      text-shadow: 0 1px 8px #222;
+      z-index: 2;
+      user-select: none;
+    }
+
+    @media (max-width: 600px) {
+      nav ul {
+        gap: 1rem;
+      }
+      h1 {
+        font-size: 2em;
+      }
+      main {
+        min-height: 60vh;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
     <nav aria-label="主导航">
-      <ul style="list-style: none; padding: 0; display: flex; gap: 1rem;">
+      <ul>
         <li><a href="/">首页</a></li>
         <li><a href="/about">关于</a></li>
       </ul>
@@ -24,7 +117,7 @@
     <p>后端由 <strong>Cloudflare</strong> 负载均衡 VPS 支持。</p>
   </main>
   <footer>
-    <p style="font-size: 0.9em; color: #888;">&copy; 2025 eezizy. 保留所有权利。</p>
+    <p>&copy; 2025 eezizy. 保留所有权利。</p>
   </footer>
 </body>
 </html>
